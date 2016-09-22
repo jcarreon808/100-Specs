@@ -426,7 +426,7 @@ function listLivingOrgClass (){
 
 function favoritePlanet(currentPlanet){
   var randomPlanet = planets[Math.floor(planets.length*Math.random())];
-  console.log(randomPlanet);
+
   if(planets.indexOf(currentPlanet) >= 0){
     return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + randomPlanet;
   }else{
@@ -457,7 +457,24 @@ function favoritePlanet(currentPlanet){
  *
  */
 
+ function Person (name, money, age, gender){
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
 
+ }
+
+Person.prototype.spendMoney = function (cash){
+  console.log(this.money, cash);
+  this.money =  this.money - cash;
+  return this.money;
+};
+
+Person.prototype.earnMoney = function (cash){
+   this.money = this.money + cash;
+   return this.money;
+};
 /* Step 28
  *
  * Define a function named "purchaseLaptop" that takes
