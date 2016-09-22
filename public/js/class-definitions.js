@@ -310,7 +310,13 @@ function addNumbers (x, y){
  * @return {Bool}
  *
  */
-
+function installLinux (Linux){
+  if(linuxFlavors.indexOf(Linux) >= 0){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 /* Step 23
  *
