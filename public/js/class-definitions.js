@@ -335,7 +335,19 @@ function installLinux (Linux){
  * @return {Bool when False, String when True}
  *
  */
-
+function drink (key) {
+if (beers.hasOwnProperty(key)){
+   // for ( var key in beers){
+      if( typeof beers[key] === 'string'){
+      return 'This '+  key + ' is ' + beers[key] + '.';
+        }
+      if( typeof beers[key]=== 'object'){
+        return  'This '+  key + ' is ' + beers[key][0] +' and ' + beers[key][1] +'.';
+      }
+  }else{
+  return false;
+  }
+}
 
 /* Step 24
  *
