@@ -360,6 +360,25 @@ if (beers.hasOwnProperty(key)){
  * @return {String if true else return false}
  *
  */
+function browseURL (key){
+    switch (key){
+      case 'Chromium':
+        return 'google.com';
+      case 'Safari':
+        return 'apple.com';
+      case 'Opera':
+        return 'opera.com';
+      case 'Firefox':
+        return 'mozilla.org';
+      case 'Sleipnir':
+        return 'fenrir-inc.com';
+      case 'Konqueror':
+        return 'konqueror.org';
+      default:
+        return false;
+    }
+}
+
 
 
 /* Step 25
