@@ -55,7 +55,7 @@ var golden_ratio = 1.61803398874;
  *
  */
 
-
+var earths_water_composition = 0.71;
 /* Step 8
  *
  * Declare a variable named "club_name"
