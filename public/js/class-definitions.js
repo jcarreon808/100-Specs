@@ -75,6 +75,10 @@ var earths_water_composition = 0.71;
  *   unknown => undefined
  */
 
+var gender = {};
+gender.female = 'female';
+gender.male = 'male';
+gender.unknown = undefined;
 
 /* Step 10
  *
