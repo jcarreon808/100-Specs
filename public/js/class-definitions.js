@@ -93,6 +93,11 @@ gender.unknown = undefined;
  *
  */
 
+var princess_leia = {};
+princess_leia.name = 'Leia Organa';
+princess_leia.money = 890;
+princess_leia.age = 20;
+princess_leia.gender = gender.female;
 
 /* Step 11
  *
