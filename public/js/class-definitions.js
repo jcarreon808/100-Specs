@@ -390,7 +390,19 @@ function browseURL (key){
  * @return {String}
  *
  */
+function listLivingOrgClass (){
+  var unorderedList = document.createElement('ul');
 
+  for (var i=0; i<livingOrganismClassification.length; i++){
+    var orderdListItem = document.createElement('li');
+    var organismText = document.createTextNode(livingOrganismClassification[i]);
+
+    orderdListItem.appendChild(organismText);
+    unorderedList.appendChild(orderdListItem);
+  }
+
+  return unorderedList.outerHTML;
+}
 
 /* Step 26
  *
@@ -412,6 +424,15 @@ function browseURL (key){
  *
  */
 
+function favoritePlanet(currentPlanet){
+  var randomPlanet = planets[Math.floor(planets.length*Math.random())];
+  console.log(randomPlanet);
+  if(planets.indexOf(currentPlanet) >= 0){
+    return 'I\'m from ' + currentPlanet + ', but I wish I could go to ' + randomPlanet;
+  }else{
+    return currentPlanet  + ' is not a planet!';
+  }
+}
 
 /* Step 27
  *
