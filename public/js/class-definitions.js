@@ -47,8 +47,7 @@ var galilean_moons = ['io', 'Europa', 'Ganymede', 'Callisto'];
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
-
-
+var golden_ratio = 1.61803398874;
 /* Step 7
  *
  * Declare a variable named "earths_water_composition"
