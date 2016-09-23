@@ -627,7 +627,7 @@ SolarSystem.prototype.removePlanet = function (planet){
  * Add a method "marries" that takes a prospective
  * love interest and returns true for "Han Solo" or false for anyone
  * else.
- *
+ *Help me Obi-wan Kenobi, you're my only hope
  * In the 'marries' method - Add a message of disapproval for "Luke Skywalker"
  * "Gross!"
  *
@@ -642,7 +642,35 @@ SolarSystem.prototype.removePlanet = function (planet){
  *   marries
  *
  */
+ PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor: PrincessLeia
+ });
 
+function PrincessLeia (name, money, age, gender){
+  Person.call(this, name, money, age, gender);
+  this.isInTrouble = null;
+}
+
+PrincessLeia.prototype.shootsGun = function(){
+  this.isInTrouble = false;
+  return 'Leia shoots her gun wildly';
+};
+
+PrincessLeia.prototype.getsInTrouble = function(){
+  this.isInTrouble = true;
+  return 'Help me Obi-wan Kenobi, you\'re my only hope';
+};
+
+PrincessLeia.prototype.marries = function (lover){
+  if(lover === 'Han Solo'){
+    return true;
+  }else{
+    if( lover === 'Luke Skywalker'){
+      return 'Gross!';
+    }
+    return false;
+  }
+};
 
 /* Step 34
  *
@@ -661,7 +689,17 @@ SolarSystem.prototype.removePlanet = function (planet){
  *   staplePapers
  *
  */
-
+function Stapler(color, maxPapers){
+  this.color = color;
+  this.maxPapers = maxPapers;
+}
+Stapler.prototype.staplePapers = function (number){
+  if(number <= this.maxPapers){
+    return true;
+  }else{
+    return false;
+  }
+};
 
 /* Step 35
  *
@@ -701,7 +739,38 @@ SolarSystem.prototype.removePlanet = function (planet){
  *   addDiscovery
  *
  */
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor: Scientist
+});
 
+function Scientist(name, money, age, gender){
+  Person.call(this, name, money, age, gender);
+  this.disciplines = [];
+  this.discoveries = [];
+}
+Scientist.prototype.addDiscipline = function (string){
+  this.disciplines.push(string);
+  return this.disciplines;
+};
+Scientist.prototype.checkDiscipline = function (string){
+  if(this.disciplines.indexOf(string) >= 0){
+    return true;
+  }else{
+    return false;
+  }
+};
+Scientist.prototype.addDiscovery = function (string){
+  this.discoveries.push(string);
+  if(this.discoveries.indexOf(string)===0){
+  return 'I discovered ' + this.discoveries + '.';
+  }
+  if(this.discoveries.indexOf(string)=== 1){
+    return 'I discovered ' + this.discoveries[0]  + ' and ' + this.discoveries[1] + '.';
+  }
+  if(this.discoveries.indexOf(string) === 2){
+    return 'I discovered ' + this.discoveries[0]  + ', ' + this.discoveries[1] + ', and ' + this.discoveries[2] + '.';
+  }
+};
 
 /* Step 36
  *
@@ -896,7 +965,10 @@ SolarSystem.prototype.removePlanet = function (planet){
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+function Animal (species, gender){
+  this.species = species;
+  this.gender = gender;
+}
 
 /**
  * Step 51
@@ -905,7 +977,10 @@ SolarSystem.prototype.removePlanet = function (planet){
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
-
+function Vehicle (make, model){
+  this.make = make;
+  this.model = model;
+}
 
 /**
  * Step 52
@@ -916,7 +991,14 @@ SolarSystem.prototype.removePlanet = function (planet){
  * value of the sides property to null.
  *
  */
+function Shape (sides){
+  if(sides >= 3){
+    this.sides = sides;
+  }else{
+    this.sides = null;
+  }
 
+}
 
 /**
  * Step 53
@@ -925,7 +1007,10 @@ SolarSystem.prototype.removePlanet = function (planet){
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-
+function Box(contents, isOpen){
+  this.contents = contents;
+  this.isOpen = isOpen ;
+}
 
 /**
  * Step 54
@@ -933,7 +1018,9 @@ SolarSystem.prototype.removePlanet = function (planet){
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door (isOpen){
+  this.isOpen = isOpen;
+}
 
 /**
  * Step 55
@@ -983,7 +1070,7 @@ SolarSystem.prototype.removePlanet = function (planet){
 
 
 // Create 2 different species of animals
-var george;
+var george ;
 var nemo;
 
 // Create 2 different vehicles
