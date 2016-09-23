@@ -1187,7 +1187,28 @@ Vehicle.prototype.drive = function(streetName){
  * Any other number => "Could not determine type"
  *
  */
-
+ Shape.prototype.getType = function (){
+  switch(this.sides){
+    case 3:
+    return 'triangle';
+    case 4:
+    return 'quadrilateral';
+    case 5:
+    return 'pentagon';
+    case 6:
+    return 'hexagon';
+    case 7:
+    return 'heptagon';
+    case 8:
+    return 'octagon';
+    case 9:
+    return 'nonagon';
+    case 10:
+    return 'decagon';
+    default:
+    return 'Could not determine type';
+  }
+ };
 
 /* Step 84
  *
@@ -1197,7 +1218,13 @@ Vehicle.prototype.drive = function(streetName){
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
+Box.prototype.openBox = function (){
+  if(this.isOpen === false){
+    return this.isOpen=true;
+  }else{
+    return false;
+  }
+};
 
  /* Step 85
  *
@@ -1206,7 +1233,13 @@ Vehicle.prototype.drive = function(streetName){
  * Return true if openClose opens the door, false if openClose closes the door.
  *
  */
-
+Door.prototype.openClose = function (){
+  if(this.isOpen === false){
+    return this.isOpen = true;
+  }else{
+    return this.isOpen = false;
+  }
+};
 
 /* Step 86
  *
@@ -1214,7 +1247,10 @@ Vehicle.prototype.drive = function(streetName){
  * the color and size of the shoe ("Found red shoes of size 7").
  *
  */
-
+Shoe.prototype.findShoes = function (){
+  console.log(this.size);
+  return 'Found ' + this.color + ' shoes of size ' + this.size.toString();
+};
 
  /* Step 87
  *
