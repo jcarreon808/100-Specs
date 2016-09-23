@@ -578,7 +578,6 @@ Garden.prototype.grow = function (){
 
   if(this.isWatered === true){
     this.plantsTotal++;
-    // return this.plantsTotal;
   }else{
     return false;
   }
@@ -601,7 +600,15 @@ Garden.prototype.grow = function (){
  *   removePlanet
  *
  */
-
+function SolarSystem (){
+  this.planets = [];
+}
+SolarSystem.prototype.addPlanet = function (planet){
+  this.planets.push(planet);
+};
+SolarSystem.prototype.removePlanet = function (planet){
+  this.planets.pop(planet);
+};
 
 /* Step 33
  *
