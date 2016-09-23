@@ -466,7 +466,7 @@ function favoritePlanet(currentPlanet){
  }
 
 Person.prototype.spendMoney = function (cash){
-  console.log(this.money, cash);
+
   this.money =  this.money - cash;
   return this.money;
 };
@@ -487,7 +487,7 @@ Person.prototype.earnMoney = function (cash){
  *
  */
 function purchaseLaptop(laptop){
-  console.log(laptop);
+
   if(laptopCosts.hasOwnProperty(laptop)){
     return laptopCosts[laptop].toString();
   }else{
@@ -534,8 +534,12 @@ function canTalkAbout (club){
  *   write
  *
  */
-
-
+function Pen (color){
+  this.color = color;
+}
+Pen.prototype.write = function (message){
+  return this.color + ': ' + message;
+};
 /* Step 31
  *
  * Define a class named "Garden" with a property for
