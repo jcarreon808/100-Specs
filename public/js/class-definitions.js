@@ -1388,8 +1388,8 @@ var closeAnOpenDoor = new Door(true).openClose(false);
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = new Shoe(7, 'red').findShoes();
+var blackShoesSize10 = new Shoe(10, 'black').findShoes();
 
 
  /* Step 97
@@ -1398,8 +1398,8 @@ var blackShoesSize10;
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+var farTooTallAStory = new House(11).isATallStory(10);
+var shortStory = new House(10).isATallStory(11);
 
 
  /* Step 98
@@ -1408,8 +1408,8 @@ var shortStory;
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn;
-var porchLightsOff;
+var kitchenLightsOn =  new Lightbulb(true).flipSwitch('on');
+var porchLightsOff = new Lightbulb(false).flipSwitch('dfa');
 
 
  /* Step 99
@@ -1418,8 +1418,8 @@ var porchLightsOff;
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns = new Cookie('chocolate').swipedByCookieMonster('Monday');
+var cookieMonsterBlocked = new Cookie('kaka').swipedByCookieMonster('Tuesday');
 
 
  /* Step 100
