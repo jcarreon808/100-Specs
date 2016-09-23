@@ -1278,7 +1278,6 @@ House.prototype.isATallStory = function (storiesTooTall){
  */
 
 Lightbulb.prototype.flipSwitch = function (string){
-  console.log(string);
   if(string === 'on'){
     return this.isOn = true;
   }else{
@@ -1314,7 +1313,16 @@ Cookie.prototype.swipedByCookieMonster = function (dayOfTheWeek){
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
-
+Meal.prototype.containsJunkFood = function (){
+  let junkFood = ['chips', 'soda', 'ice cream', 'popcorn', 'candy'];
+  for(let i = 0; i<this.foods.length; i++){
+    if(junkFood.indexOf(this.foods[i])!== -1){
+      return true;
+    }else{
+      return false;
+    }
+  }
+};
 
  /* Steps 91 to 100
  *
@@ -1329,9 +1337,9 @@ Cookie.prototype.swipedByCookieMonster = function (dayOfTheWeek){
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal = new Animal('Monkey', 'male').isWarmBlooded('true');
+var coldBloodedAnimal = new Animal ('Fish', 'male').isWarmBlooded('false');
+var notWarmOrColdAnimal = new Animal('Kaka', 'trans').isWarmBlooded('Could not determine if warm-blooded');
 
 
 /* Step 92
@@ -1340,8 +1348,8 @@ var notWarmOrColdAnimal;
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = new Vehicle('Honda', 'Civic').drive('cool Lane');
+var forwardDriving = new Vehicle('Mazda','Car').drive('');
 
 
  /* Step 93
@@ -1350,8 +1358,8 @@ var forwardDriving;
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var decagon = new Shape(10).getType(10);
+var polygon = new Shape(11).getType(11);
 
 
 /* Step 94
@@ -1360,8 +1368,8 @@ var polygon;
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = new Box('cats',false).openBox(true);
+var closeAnOpenBox = new Box('dogs', true).openBox(false);
 
 
  /* Step 95
@@ -1370,8 +1378,8 @@ var closeAnOpenBox;
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var openAClosedDoor = new Door(false).openClose(true);
+var closeAnOpenDoor = new Door(true).openClose(false);
 
 
 /* Step 96
