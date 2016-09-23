@@ -1248,7 +1248,6 @@ Door.prototype.openClose = function (){
  *
  */
 Shoe.prototype.findShoes = function (){
-  console.log(this.size);
   return 'Found ' + this.color + ' shoes of size ' + this.size.toString();
 };
 
@@ -1260,7 +1259,13 @@ Shoe.prototype.findShoes = function (){
  * storiesTooTall, return true, else return false.
  *
  */
-
+House.prototype.isATallStory = function (storiesTooTall){
+  if(this.stories >= storiesTooTall){
+    return true;
+  }else{
+    return false;
+  }
+};
 
  /* Step 88
  *
@@ -1272,6 +1277,14 @@ Shoe.prototype.findShoes = function (){
  *
  */
 
+Lightbulb.prototype.flipSwitch = function (string){
+  console.log(string);
+  if(string === 'on'){
+    return this.isOn = true;
+  }else{
+    return this.isOn = false;
+  }
+};
 
  /* Step 89
  *
@@ -1280,7 +1293,13 @@ Shoe.prototype.findShoes = function (){
  * and the dayOfTheWeek is "Monday", return true.  Else return false.
  *
  */
-
+Cookie.prototype.swipedByCookieMonster = function (dayOfTheWeek){
+  if(this.flavor === 'chocolate'&& dayOfTheWeek === 'Monday'){
+    return true;
+  }else{
+    return false;
+  }
+};
 
  /* Step 90
  *
